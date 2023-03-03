@@ -7,6 +7,9 @@ SSH into your pi and enter the following commands
 ```
 cd ~/printer_data/config
 git clone https://github.com/ShuttleworthM/RatOS-RoboMFG-Additions.git RoboMFG
+mv printer.cfg printer_OLD.cfg
+cp ~/printer_data/config/RoboMFG/template/robomfg-printer.template.cfg ~/printer_data/config/printer.cfg
+systemctl restart klipper
 ```
 
 # Update Manager

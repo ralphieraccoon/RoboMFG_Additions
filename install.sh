@@ -30,10 +30,10 @@ function stop_klipper {
 function link_additions_folder {
     if [ -d "${CONFIG_DIR}" ]; then
         if [ -d "${CONFIG_DIR}/additions" ]; then
-            echo -e "${CONFIG_DIR}/custom already exists, skipping..."
+            echo -e "${CONFIG_DIR}/additions already exists, skipping..."
         else
-            ln -s ${SRCDIR}/additions ${CONFIG_DIR}/additions
-            echo -e "additions folder linked"
+            cp ${SRCDIR}/additions ${CONFIG_DIR}/additions
+            echo -e "additions folder coppied"
         fi
     else
         echo -e "ERROR: ${CONFIG_DIR} not found."

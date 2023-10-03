@@ -75,7 +75,7 @@ echo -e "RoboMFG Additions"
 stop_klipper
 link_additions_folder
 copy_board_files
-copy_cfg
+copy_cfg_template
 update_udev_rules
 start_klipper
 echo -e ""

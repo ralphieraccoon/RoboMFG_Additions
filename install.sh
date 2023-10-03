@@ -53,7 +53,7 @@ function copy_board_files {
 
 function copy_cfg {
     if [ -d "${CONFIG_DIR}" ]; then
-        mv printer.cfg printer_OLD.cfg
+        mv "${CONFIG_DIR}/printer.cfg" "${CONFIG_DIR}/printer_OLD.cfg"
         cp "${SRCDIR}/printer.cfg" "${CONFIG_DIR}/printer.cfg"
         echo -e "printer.cfg copied"
     else

@@ -7,7 +7,7 @@ SSH into your pi and enter the following commands
 ```
 cd ~/
 git clone https://github.com/Advanced-Manufacturing-at-UoL/RoboMFG_Additions.git
-bash ~/Robot-MFG-Platform_RatOS-Additions/install.sh
+bash ~/RoboMFG_Additions/install.sh
 ```
 
 # Update Manager

@@ -19,6 +19,5 @@ type: git_repo
 primary_branch: main
 path: ~/Robot-MFG-Platform_RatOS-Additions
 origin: https://github.com/Advanced-Manufacturing-at-UoL/Robot-MFG-Platform_RatOS-Additions.git
-managed_services:
-	klipper
+managed_services: klipper
 ```

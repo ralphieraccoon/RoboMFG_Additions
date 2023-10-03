@@ -32,7 +32,7 @@ function link_additions_folder {
         if [ -d "${CONFIG_DIR}/additions" ]; then
             echo -e "${CONFIG_DIR}/additions already exists, skipping..."
         else
-            cp -av ${SRCDIR}/additions ${CONFIG_DIR}/additions
+            ln-s ${SRCDIR}/additions ${CONFIG_DIR}/additions
             echo -e "additions folder coppied"
         fi
     else

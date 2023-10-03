@@ -6,7 +6,7 @@ SSH into your pi and enter the following commands
 
 ```
 cd ~/
-git clone https://github.com/Advanced-Manufacturing-at-UoL/Robot-MFG-Platform_RatOS-Additions.git
+git clone https://github.com/Advanced-Manufacturing-at-UoL/RoboMFG_Additions.git
 bash ~/Robot-MFG-Platform_RatOS-Additions/install.sh
 ```
 
@@ -18,6 +18,6 @@ To recieve updates from the git repo add the following lines to the bottom of th
 type: git_repo
 primary_branch: main
 path: ~/Robot-MFG-Platform_RatOS-Additions
-origin: https://github.com/Advanced-Manufacturing-at-UoL/Robot-MFG-Platform_RatOS-Additions.git
+origin: https://github.com/Advanced-Manufacturing-at-UoL/RoboMFG_Additions.git
 managed_services: klipper
 ```

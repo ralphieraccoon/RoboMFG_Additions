@@ -53,7 +53,7 @@ function copy_board_files {
 
 function copy_cfg_template {
     if [ -d "${CONFIG_DIR}" ]; then
-        cp "${SRCDIR}/.RoboMFG_Template_printer.cfg" "${CONFIG_DIR}/RoboMFG_Template_printer.cfg"
+        cp "${SRCDIR}/.RoboMFG_Template_printer.cfg" "${CONFIG_DIR}/.RoboMFG_Template_printer.cfg"
         echo -e "printer.cfg template copied"
     else
         echo -e "ERROR: ${CONFIG_DIR} not found."

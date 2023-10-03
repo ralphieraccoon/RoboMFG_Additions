@@ -1,4 +1,4 @@
-# RatOS-RoboMFG-Additions
+# RoboMFG Additions
 Additional configs and scripts for the AMPI robotics manufacturing platform
 
 # Installation

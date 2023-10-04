@@ -44,6 +44,7 @@ function link_additions_folder {
 function copy_board_files {
     if [ -d "${CONFIG_DIR}" ]; then
         sudo cp -av "${SRCDIR}/RatOS/boards/btt-ebb42-12b" "${CONFIG_DIR}/RatOS/boards"
+        chmod 750 "${SRCDIR}/RatOS/boards/btt-ebb42-12b/*.sh"
         echo -e "BTT EBB42 V1.2 board files copied"
     else
         echo -e "ERROR: ${CONFIG_DIR} not found."

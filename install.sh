@@ -27,12 +27,12 @@ function stop_klipper {
     fi
 }
 
-function link_additions_folder {
+function copy_additions_folder {
     if [ -d "${CONFIG_DIR}" ]; then
         if [ -d "${CONFIG_DIR}/additions" ]; then
             echo -e "${CONFIG_DIR}/additions already exists, skipping..."
         else
-            ln -s ${SRCDIR}/additions ${CONFIG_DIR}/additions
+            sudo cp -av ${SRCDIR}/additions ${CONFIG_DIR}/additions
             echo -e "additions folder coppied"
         fi
     else
@@ -44,7 +44,6 @@ function link_additions_folder {
 function copy_board_files {
     if [ -d "${CONFIG_DIR}" ]; then
         sudo cp -av "${SRCDIR}/RatOS/boards/btt-ebb42-12b" "${CONFIG_DIR}/RatOS/boards"
-        chmod 750 "${SRCDIR}"/RatOS/boards/btt-ebb42-12b/*.sh
         echo -e "BTT EBB42 V1.2 board files copied"
     else
         echo -e "ERROR: ${CONFIG_DIR} not found."
@@ -74,7 +73,7 @@ function update_udev_rules {
 
 echo -e "RoboMFG Additions"
 stop_klipper
-link_additions_folder
+copy_additions_folder
 copy_board_files
 copy_cfg_template
 update_udev_rules

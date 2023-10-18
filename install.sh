@@ -74,12 +74,22 @@ function update_udev_rules {
 function install_ktcc {
     cd ~
     git clone https://github.com/TypQxQ/Klipper_ToolChanger.git
+    bash ~/Klipper_ToolChanger/install.sh
+    echo -e "KTCC installed"
 }
 
 function install_z_calibration {
     cd ~
     git clone https://github.com/protoloft/klipper_z_calibration.git
-    ./klipper_z_calibration/install.sh
+    bash ~/klipper_z_calibration/install.sh
+    echo -e "Automatic Z-Calibration installed"
+}
+
+function install_dynamixel {
+    cd ~/
+    git clone https://github.com/Advanced-Manufacturing-at-UoL/RoboMFG_Dynamixel.git
+    bash ~/RoboMFG_Dynamixel/install.sh
+    echo -e "Dynamixel installed"
 }
 
 echo -e "RoboMFG Additions"
@@ -91,6 +101,8 @@ update_udev_rules
 start_klipper
 install_ktcc
 install_z_calibration
+install_dynamixel
+
 echo -e ""
 echo -e "Installation finished!"
 echo -e ""

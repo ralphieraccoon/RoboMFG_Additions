@@ -71,6 +71,17 @@ function update_udev_rules {
     fi
 }
 
+function install_ktcc {
+    cd ~
+    git clone https://github.com/TypQxQ/Klipper_ToolChanger.git
+}
+
+function install_z_calibration {
+    cd ~
+    git clone https://github.com/protoloft/klipper_z_calibration.git
+    ./klipper_z_calibration/install.sh
+}
+
 echo -e "RoboMFG Additions"
 stop_klipper
 copy_additions_folder
@@ -78,6 +89,8 @@ copy_board_files
 copy_cfg_template
 update_udev_rules
 start_klipper
+install_ktcc
+install_z_calibration
 echo -e ""
 echo -e "Installation finished!"
 echo -e ""

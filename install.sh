@@ -95,9 +95,9 @@ function install_dynamixel {
 echo -e "RoboMFG Additions"
 stop_klipper
 copy_additions_folder
-copy_board_files
+# copy_board_files
 copy_cfg_template
-update_udev_rules
+# update_udev_rules
 start_klipper
 install_ktcc
 install_z_calibration

@@ -19,8 +19,7 @@ function start_klipper {
 }
 
 function stop_klipper {
-    # if [ "$(sudo systemctl list-units --full -all -t service --no-legend | grep -F "klipper.service")" ]; then
-    if [ "$(sudo systemctl list-units -t service --no-legend | grep -F "klipper.service")" ]; then
+    if [ "$(sudo systemctl list-units --full -all -t service --no-legend | grep -F "klipper.service")" ]; then
         sudo systemctl stop klipper
     else
         echo "Klipper service not found, please install Klipper first"

@@ -101,7 +101,7 @@ copy_cfg_template
 start_klipper
 install_ktcc
 install_z_calibration
-install_dynamixel
+# install_dynamixel
 
 echo -e ""
 echo -e "Installation finished!"
